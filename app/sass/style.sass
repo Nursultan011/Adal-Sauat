@@ -347,4 +347,45 @@ footer
                 width: 26px !important
                 height: 26px !important
 
+@media (min-width: 768px) and (max-width: 992px)
+
+    header
+        .inner_left
+            width: auto !important
+            justify-content: flex-start !important
+            img
+                &:first-child
+                    width: 15% !important
+                    margin-right: 10px
+                &:last-child
+                    width: 50% !important
+        .inner_right
+            width: auto !important
+            nav
+                display: none !important
+            &_langs
+                display: none !important
+
+    main
+        .blocks
+            margin-top: 50px !important
+            &_content
+                width: 100% !important
+                div
+                    &:first-child
+                        width: 50px !important
+                        img
+                            width: 50px !important
+                            height: 50px !important
+                    &:last-child
+                        width: calc(100% - 70px) !important
+                        p
+                            font-size: 18px
+                            line-height: 22px
+
+    footer
+        .footer_center
+            nav
+                width: 60% !important
+
 @import 'media'

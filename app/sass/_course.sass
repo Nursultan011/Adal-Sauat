@@ -333,3 +333,53 @@
           height: auto
         &__bottom
           margin-top: 40px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .about
+    &__item-content
+      .lesson
+        flex-wrap: wrap
+        padding-top: 30px
+        &__video
+          width: 100%
+          height: 300px
+          img
+            object-fit: cover
+            object-position: center
+          .play
+            top: calc(50% - 40px)
+            left: calc(50% - 40px)
+            img
+              width: 80px
+              height: 80px
+        &__time
+          padding: 9px 16px
+          right: 15px
+          bottom: 15px
+          font-size: 12px
+        &__descr
+          margin-top: 20px
+          width: 100%
+          height: auto
+        &__bottom
+          margin-top: 40px
+    &__second
+      .preview
+        flex-wrap: wrap
+        &__video
+          width: 100%
+          height: 330px
+          img
+            object-fit: cover
+            object-position: center
+          .play
+            top: calc(50% - 40px)
+            left: calc(50% - 40px)
+            img
+              width: 80px
+              height: 80px
+        &__descr
+          width: 100%
+          margin-top: 20px
+          padding: 20px 20px 40px 20px
+          height: auto
