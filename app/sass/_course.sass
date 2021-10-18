@@ -239,3 +239,97 @@
             width: 20px
             height: 20px
             margin-right: 5px
+
+@media (max-width: 767px)
+  .author
+    height: 500px
+    &__inner
+      padding-bottom: 50px
+    &__name
+      text-align: center
+      font-size: 26px
+    &__title
+      font-size: 20px
+    &__descr
+      margin: 30px 0
+      font-size: 18px
+
+  .about
+    &__first
+      div
+        &:first-child
+          flex-direction: column-reverse
+        &:last-child
+          flex-direction: column
+      p
+        width: 100%
+        font-size: 20px
+        text-align: left !important
+      img
+        width: 100%
+        margin-bottom: 20px
+    &__second
+      .preview
+        flex-wrap: wrap
+        &__video
+          width: 100%
+          height: 210px
+          img
+            object-fit: cover
+            object-position: center
+          .play
+            top: calc(50% - 40px)
+            left: calc(50% - 40px)
+            img
+              width: 80px
+              height: 80px
+        &__descr
+          width: 100%
+          margin-top: 20px
+          padding: 20px 20px 40px 20px
+          height: auto
+        &__time
+          padding: 9px 16px
+          right: 15px
+          bottom: 15px
+          font-size: 12px
+    &__item
+      margin-top: 20px
+      padding: 20px 20px
+    &__item-title
+      width: calc(100% - 35px)
+      font-size: 20px
+      span
+        margin-right: 10px
+    &__item-arrow
+      width: 20px
+      img
+        width: 20px
+        height: 20px
+    &__item-content
+      .lesson
+        flex-wrap: wrap
+        padding-top: 30px
+        &__video
+          width: 100%
+          height: 210px
+          img
+            object-fit: cover
+            object-position: center
+          .play
+            top: calc(50% - 40px)
+            left: calc(50% - 40px)
+            img
+              width: 80px
+              height: 80px
+        &__time
+          padding: 9px 16px
+          right: 15px
+          bottom: 15px
+          font-size: 12px
+        &__descr
+          margin-top: 20px
+          width: 100%
+          height: auto
+        &__bottom
+          margin-top: 40px

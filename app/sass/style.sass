@@ -76,12 +76,11 @@ main
                         margin-top: 60px
     .speakers
         padding-bottom: 10%
-        padding-top: 5%
+        padding-top: 75px
         &>h2
             margin-bottom: 50px
         &_wrapper
             @include flex
-
             &_content
                 position: relative
                 height: 380px
@@ -141,7 +140,7 @@ main
     section.blocks
         @include flex(space-between,unset)
         flex-wrap: wrap
-        margin-top: 5%
+        margin-top: 80px
         &>div
             background-color: #16171C
             width: 49%
@@ -260,5 +259,85 @@ footer
                         path
                             stroke: $green
 
+// Adaptive
+
+@media (max-width: 767px)
+    .button
+        font-size: 18px !important
+
+    .tabs
+        width: 100% !important
+        .tab
+            width: 50% !important
+            padding: 0 0 12px !important
+            text-align: center
+            font-size: 18px
+
+    header
+        .inner_left
+            width: auto !important
+            justify-content: flex-start !important
+            img
+                &:first-child
+                    width: 15% !important
+                    margin-right: 10px
+                &:last-child
+                    width: 50% !important
+        .inner_right
+            width: auto !important
+            nav
+                display: none !important
+            &_langs
+                display: none !important
+
+    main
+        .sliders
+            &_wrapper_inner
+                padding: 0 20px !important
+                h4
+                    width: auto !important
+                    font-size: 18px
+                    line-height: 22px
+                button
+                    margin-top: 40px !important
+        .blocks
+            margin-top: 50px !important
+            &_content
+                width: 100% !important
+                div
+                    &:first-child
+                        width: 50px !important
+                        img
+                            width: 50px !important
+                            height: 50px !important
+                    &:last-child
+                        width: calc(100% - 70px) !important
+                        p
+                            font-size: 18px
+                            line-height: 22px
+        .speakers
+            padding-top: 50px !important
+            &_wrapper
+                flex-wrap: wrap
+                &_content
+                    width: 100% !important
+
+    footer
+        padding: 70px 0 !important
+        .footer_center
+            margin: 50px 0 !important
+            nav
+                width: 65% !important
+                flex-wrap: wrap !important
+                a
+                    width: 100% !important
+                    margin-top: 0 !important
+                    margin-bottom: 20px !important
+            &_langs
+                width: 35% !important
+        .footer_bottom_left
+            img
+                width: 26px !important
+                height: 26px !important
 
 @import 'media'
