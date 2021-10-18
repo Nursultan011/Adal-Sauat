@@ -259,3 +259,24 @@ footer
                     svg
                         path
                             stroke: $green
+
+.bottom_navBar
+    position: fixed
+    bottom: 0
+    width: 100%
+    background-color: #16171C
+    z-index: 12
+    @include flex(space-around,center)
+    padding: 11px 0
+    border-radius: 30px 30px 0px 0px
+    box-shadow: 0px 0px 20px 15px rgba(119, 119, 119, 0.1)
+    &_items
+        @include flex
+        flex-direction: column
+    .active
+        &>svg
+            stroke: $green
+        &>span
+            color: $green
+
+@import 'media'
