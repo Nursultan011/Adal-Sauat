@@ -301,10 +301,12 @@ footer
         .sliders
             &_wrapper_inner
                 padding: 0 20px !important
+                h2
+                    font-size: 30px !important
                 h4
                     width: auto !important
-                    font-size: 18px
-                    line-height: 22px
+                    font-size: 18px !important
+                    line-height: 24px !important
                 button
                     margin-top: 40px !important
         .blocks
@@ -320,8 +322,8 @@ footer
                     &:last-child
                         width: calc(100% - 70px) !important
                         p
-                            font-size: 18px
-                            line-height: 22px
+                            font-size: 18px !important
+                            line-height: 24px !important
         .speakers
             padding-top: 50px !important
             &_wrapper
@@ -334,9 +336,20 @@ footer
                     background-position: top !important
                     &_inner
                         bottom: 0
+            &>h2
+                font-size: 30px !important
 
     footer
         padding: 70px 0 !important
+        .footer
+            position: relative
+            .footer_center_langs
+                position: absolute
+                right: 0.75rem
+                top: 0
+        .footer_top
+            img
+                width: 100px !important
         .footer_center
             margin: 50px 0 !important
             nav
@@ -352,6 +365,12 @@ footer
             img
                 width: 26px !important
                 height: 26px !important
+        .footer_bottom_right
+            span
+                font-size: 14px !important
+            svg
+                width: 36px !important
+                height: 36px !important
 
 @media (min-width: 768px) and (max-width: 992px)
 
