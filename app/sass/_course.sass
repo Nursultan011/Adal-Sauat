@@ -134,6 +134,9 @@
     padding: 40px
   &__item-wrap
     @include flex(space-between, center)
+    .done
+      color: #25B072
+      font-size: 22px
   &__item-title
     font-size: 24px
     width: calc(80% - 46px)
@@ -295,6 +298,13 @@
     &__item
       margin-top: 20px
       padding: 20px 20px
+      position: relative
+    &__item-wrap
+      .done
+        position: absolute
+        font-size: 12px
+        left: 45px
+        top: 2px
     &__item-title
       width: calc(100% - 35px)
       font-size: 18px
@@ -337,6 +347,9 @@
 
 @media (min-width: 768px) and (max-width: 991px)
   .about
+    &__item-wrap
+      .done
+        font-size: 16px
     &__item-content
       .lesson
         flex-wrap: wrap

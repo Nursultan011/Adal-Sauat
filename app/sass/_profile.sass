@@ -1,35 +1,62 @@
 .profile
   padding-bottom: 185px
+  &__authorization
+    display: flex
+    align-items: center
+    background: #16171C
+    border-radius: 10px
+    margin-bottom: 60px
+    padding: 30px 40px 30px 60px
+    img
+      margin-right: 50px
+      width: 100px
+      height: 100px
+      border-radius: 100%
+      object-fit: cover
+      object-position: center
+    a
+      font-family: 'font-md'
+      font-size: 24px
+      color: $white !important
+
   &__user
     @include flex(space-between)
-    padding: 40px 60px
-    background: linear-gradient(270deg, rgba(22, 23, 28, 0.3) 21.97%, #16171C 98.43%)
+    padding: 30px 40px 30px 60px
+    background: #16171C
     border-radius: 10px
+    margin-bottom: 60px
   &__user-content
     @include flex
   &__user-img
     margin-right: 50px
     img
-      width: 140px
-      height: 140px
+      width: 100px
+      height: 100px
       border-radius: 100%
       object-fit: cover
       object-position: center
   &__user-descr
     p
       margin-bottom: 15px
+      max-width: 290px
       font-size: 24px
       font-family: 'semibold'
       color: $white
-      max-width: 400px
     span
       color: $darkGrey
       font-size: 20px
       font-family: 'font-md'
   &__user-edit
+    height: 60px
     cursor: pointer
-    margin-bottom: 40px
-    img
+    border-left: 1px solid #696969
+    border-right: 1px solid #696969
+    padding-right: 45px
+    padding-left: 45px
+    margin-left: 25px
+    display: flex
+    align-items: center
+    svg
       width: 24px
       height: 24px
       margin-right: 10px
@@ -37,14 +64,19 @@
       border-bottom: 1px solid $green
       color: $green
       font-size: 20px
+  &__user-logout
+    svg
+      width: 34px
+      height: 34px
+      cursor: pointer
   &__items
     .open
       background: $darkerBg !important
   &__item
+    background: #16171C
     border-radius: 10px
     margin-top: 20px
-    padding: 40px 60px
-    background: linear-gradient(270deg, rgba(22, 23, 28, 0.3) 21.97%, #16171C 98.43%)
+    padding: 30px 40px 30px 60px
   &__item-wrap
     @include flex(space-between)
   &__item-content
@@ -146,11 +178,24 @@
         margin-right: 10px
       &:last-child
         margin-right: 0 !important
+    &__authorization
+      padding: 20px
+      background: #16171c
+      margin-bottom: 20px
+      img
+        margin-right: 15px
+        height: 60px
+        width: 60px
+      a
+        font-size: 18px
+        font-family: 'font-md'
+
     &__user
       padding: 20px
       background: #16171c
+      margin-bottom: 20px
       &-content
-        width: calc(100% - 34px)
+        width: calc(100% - 39px)
         justify-content: flex-start
       &-img
         margin-right: 15px
@@ -170,11 +215,45 @@
       &-edit
         margin-top: 0px
         margin-bottom: 0px
+        border-right: none
+        padding-left: 0
+        margin-right: 0px
+        margin-left: 0px
+        padding-left: 0
+        padding-right: 0
+        border-left: none
         span
           font-size: 15px
           display: none
-        img
+        svg
           margin-right: 0
+          width: 20px
+          height: 20px
+          path
+            stroke: $black
+        &>div
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 34px
+          height: 34px
+          border-radius: 100%
+          background: $white
+      &-logout
+        display: none
+        // display: flex
+        // align-items: center
+        // justify-content: center
+        // width: 40px
+        // height: 40px
+        // border-radius: 100%
+        // background: $white
+        // svg
+        //   margin-right: 0
+        //   width: 30px
+        //   height: 30px
+        //   path
+        //     stroke: $white
 
 @media (min-width: 768px) and (max-width: 991px)
   .profile
@@ -230,8 +309,24 @@
       &-edit
         margin-top: 0px
         margin-bottom: 0px
+        height: 40px
+        margin-right: 25px
+        padding-right: 0px
+        padding-left: 25px
+        margin-left: 25px
+        border-right: none
         span
           font-size: 15px
           display: none
-        img
+        svg
           margin-right: 0
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .profile__user-descr
+    p
+      max-width: 220px
+
+  .profile__user-edit
+    padding-right: 20px
+    padding-left: 20px
+    margin-left: 10px
